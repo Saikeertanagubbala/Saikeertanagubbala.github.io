@@ -373,8 +373,7 @@ img {
   {% endunless %}
 }
 .navbar-custom .avatar-container .avatar-img {
-  width: 60px;  /* Change from 100% to a fixed size */
-  height: 60px; /* Add this line */
+  width: 100%;
   {% unless site.round-avatar == false %}
     border-radius: 50%;
   {% endunless %}
