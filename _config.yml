@@ -98,7 +98,7 @@ share-links-active:
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "https://saikeertanagubbala.github.io/"
+#url-pretty: "https://saikeertanagubbala.github.io/"
 
 # Add the website title to the title of every page
 title-on-all-pages: true
@@ -124,7 +124,7 @@ edit_page_button: false
 navbar-var-length: false
 
 # The keywords to associate with your website, for SEO purposes
-keywords: "data science,machine learning,modelling,analyst, research analysis, business analyst, tableau, BI"
+keywords: "data science,machine learning,modeling,analyst, research analysis, exploratory data analysis, EDA, business analyst, tableau, BI, regression, clustering"
 
 ######################################
 # --- Colours / background image --- #
@@ -132,14 +132,14 @@ keywords: "data science,machine learning,modelling,analyst, research analysis, b
 
 # Personalize the colours in your website. Colour values can be any valid CSS colour
 
-page-col: "#FFFFFF"
+page-col: "#fdfcdc"
 text-col: "#404040"
 link-col: "#008AFF"
 hover-col: "#0085A1"
-navbar-col: "#DBA1A2"
+navbar-col: "#00afb9"
 navbar-text-col: "#404040"
 navbar-border-col: "#DDDDDD"
-footer-col: "#EAEAEA"
+footer-col: "#00afb9"
 footer-text-col: "#777777"
 footer-link-col: "#404040"
 footer-hover-col: "#0085A1"
