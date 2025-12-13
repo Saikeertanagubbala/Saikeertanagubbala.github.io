@@ -132,14 +132,14 @@ keywords: "data science,machine learning,modeling,analyst, research analysis, ex
 
 # Personalize the colours in your website. Colour values can be any valid CSS colour
 
-page-col: "#fdfcdc"
+page-col: "#f8edeb"
 text-col: "#404040"
 link-col: "#008AFF"
 hover-col: "#0085A1"
-navbar-col: "#00afb9"
+navbar-col: "#ffb5a7"
 navbar-text-col: "#404040"
 navbar-border-col: "#DDDDDD"
-footer-col: "#00afb9"
+footer-col: "#ffb5a7"
 footer-text-col: "#777777"
 footer-link-col: "#404040"
 footer-hover-col: "#0085A1"
