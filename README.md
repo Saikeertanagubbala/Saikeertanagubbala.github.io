@@ -1,3 +1,15 @@
+# Sai Keertana Gubbala
+
+This is my simple portfolio website created to display my skills, and experience. Feel free to fork the repo from the original creator for the most updated version and use it for your own purposes.
+
+### Connect with Me:
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/keertanagubbala/)
+
+
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:gubbala.keertana@gmail.com)
+
+
 # Beautiful Jekyll
 
 [![Gem Version](https://badge.fury.io/rb/beautiful-jekyll-theme.svg)](https://badge.fury.io/rb/beautiful-jekyll-theme)
