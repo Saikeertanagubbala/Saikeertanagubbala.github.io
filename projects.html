@@ -2,219 +2,330 @@
 title: projects
 subtitle: some stuff i've worked on
 ---
+<style>
+.projects-container {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
 
-<section class = "ds-projects">
-    <h3 style = "text-align: center;">Data Science</h3>
-    <div style="display: flex; align-items: center; gap: 20px;">
-        <div style="flex: 1;">
-            <h3 style="font-size:large;">Supercomputer Efficiency </h3>
-            <p style = "font-size: smaller; margin-top: 0;">Aug 2025 - Dec 2025</p>
-            <p style = "font-size: medium; margin-top: 0%;">An interactive Streamlit dashboard exploring the intersection of energy-efficient computing, supercomputer performance, and global data center sustainability.</p>
-            <a href="https://sustainablesupercomputers.streamlit.app/" target="_blank" style="
-            background: #2d6a4f;
-            color: white;
-            padding: 0.5rem 2rem;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: 300;
-            font-size: 1rem;
-            display: inline-block;">App</a>
-            
-        </div>
-        <img src="/assets/img/supercomputers.png" alt="Website mockup" width="300" height="150" style="border-radius: 15px;">
-    </div>
-    <!--<div style="display: flex; align-items: center; gap: 20px;">
-        <div style="flex: 1;"> 
-            <h3 style="font-size:large;">Big Tech's Water & Carbon Footprints </h3>
-            <p style = "font-size: smaller; margin-top: 0;">Aug 2025 - Dec 2025</p> 
-            <p style = "font-size: medium; margin-top: 0%;">(Under development...)</p>
+.masonry-grid {
+    column-count: 3;
+    column-gap: 6rem;
+}
+
+.project-item {
+    break-inside: avoid;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.project-content {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    margin-top: 0.5rem;
+}
+
+.project-link {
+    flex-shrink: 0;
+    margin-top: 1.5rem;
+}
+
+.project-link img {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 0 !important;
+    display: block;
+    opacity: 0.8;
+}
+
+.project-link img:hover {
+    opacity: 1;
+}
+
+.project-item > img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 25px;
+}
+
+.project-caption h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.project-caption p {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+/*responsiveness for diff screen sizes*/
+@media (max-width: 1200px) {
+    .masonry-grid {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .masonry-grid {
+        column-count: 1;
+    }
+    
+    .projects-container {
+        padding: 1rem;
+    }
+}
+</style>
+
+<div class="projects-container">
+    <h3 style="margin-bottom: 1em; font-weight: 600; text-align: center;">data science</h3>
+    
+    <div class="masonry-grid">
+        
+        <div class="project-item">
+            <img src="/assets/img/supercomputers.jpg" alt="Supercomputer Efficiency" height = "100">
+            <div class="project-content">
+                <a href="https://github.com/Saikeertanagubbala/sustainable_supercomputers" class="project-link" target="_blank">
+                    <img src="/assets/img/github-mark-white.png" alt="github link">
+                </a>
+                <div class="project-caption">
+                    <h3>Supercomputer Efficiency</h3>
+                    <p>Aug 2025 - Dec 2025</p>
+                    <p>Built an interactive Streamlit dashboard exploring the topic of energy-efficient computing, supercomputer performance, and global data center sustainability.</p>
+                </div>
             </div>
-            <a href="" target="_blank" style="
-            background: #2d6a4f;
-            color: white;
-            padding: 0.5rem 2rem;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: 300;
-            font-size: 1rem;
-            display: inline-block;">App</a>
-            
-        </div> 
-        <img src="/assets/img/" alt="" width="300" height="150" style="border-radius: 15px;">
-    </div> -->
-    <hr>
-    <div style="display: flex; align-items: center; gap: 20px;">
-        <div style="flex: 1;">
-            <h3 style="font-size:large; margin-top: 0;">AI Assistance by Students</h3>
-            <p style = "font-size: smaller;">Aug 2025 - Dec 2025</p>
-            <p style = "font-size: medium; margin-top: 0%;">This study (done as a group project) analyzes 9,551 student-AI interaction sessions to address three primary questions: (1) What factors predict student satisfaction with AI educational tools? (2) How does usage differ between disciplines, levels, and associated tasks? (3) What characteristics influence repeat usage of an AI tool among students?</p>
-            <a href="/assets/img/STT_Final_Report.pdf" target="_blank" style="
-                background: #2d6a4f;
-                color: white;
-                padding: 0.5rem 2rem;
-                border-radius: 10px;
-                text-decoration: none;
-                font-weight: 300;
-                font-size: 1rem;
-                display: inline-block;">Paper</a>
         </div>
-        <img src="/assets/img/cross_metrics.png" alt="Website mockup" width="300" height="200" style="border-radius: 15px;">
-    </div>
-    <hr>
-    <div>
-        <h3 style="font-size:large; margin-top: 0;">SCC Grid Search Optimization</h3>
-        <p style = "font-size: smaller;">Aug 2024 - Dec 2024</p>
-        <p style = "font-size: medium; margin-top: 0%;">Collaborated with a team to optimize SimplyCellCounter (SCC) for automated cell quantification. Using grid search in Python, we fine-tuned parameters and improved accuracy across a diverse dataset of mice brain images. Our work attempted to streamline SCC’s usability by addressing variability in tissue and image quality.</p>
-    </div>
-    <hr>
-    <div style="display: flex; align-items: center; gap: 20px;">
-        <div style="flex: 1;">
-            <h3 style="font-size:large;">Popular Tech Online Courses</h3>
-            <p style = "font-size: smaller; margin-top: 0;">Jan 2025 - April 2025</p>
-            <p style = "font-size: medium; margin-top: 0%;">Analyzed and visualized Coursera (online course platform) data using Pandas, NumPy, Matplotlib, Seaborn, and Plotly, while addressing data quality challenges like missing values and subdomain misclassification. Highlights data cleaning, EDA, and creating accessible, insightful visualizations to uncover trends.</p>
-            <p style = "font-size: smaller; margin-top: 0;">Note: This project will be reworked to utilize NLP methods to do the subdomain classification.</p>
-            <a href="https://github.com/Saikeertanagubbala/online-course-analysis" target="_blank" style="
-        background: #2d6a4f;
-        color: white;
-        padding: 0.5rem 2rem;
-        border-radius: 10px;
-        text-decoration: none;
-        font-weight: 300;
-        font-size: 1rem;
-        display: inline-block;">GitHub</a>
+        
+        <div class="project-item">
+            <img src="/assets/img/sat_vs_al.png" alt="AI Assistance by Students">
+            <div class="project-caption">
+                <h3>AI Assistance by Students</h3>
+                <p>Aug 2025 - Dec 2025</p>
+                <p>This group project explored the usage of AI by students across multiple disciplines, their satisfaction levels, and re-usage. Mainly an EDA project with some modeling done, and a paper written in LaTeX via OverLeaf.</p>
+                <a href="/assets/img/STT_Final_Report.pdf" style="
+                    background: #D9D9D9;
+                    color: #404040;
+                    padding: 0.4rem 1rem;
+                    border-radius: 20px;
+                    font-weight: 600;
+                    font-size: 1rem;
+                    text-decoration: none;
+                    display: inline-block;
+                    box-shadow: 0 2px 8px rgba(45, 106, 79, 0.2);
+                    margin-top: 0.7em;
+                    align-items: center;
+                " 
+                onmouseover="this.style.background='#F5B0B1'; this.style.boxShadow='0 4px 12px rgba(45, 106, 79, 0.3)'" 
+                onmouseout="this.style.background='#D9D9D9'; this.style.boxShadow='0 2px 8px rgba(45, 106, 79, 0.2)'">
+                    Paper
+                </a>
+            </div>
         </div>
-        <img src="/assets/img/Coursera_plot.png" alt="Website mockup" width="300" height="200" style="border-radius: 15px;">
-    </div>
-    <hr>
-    <div style="display: flex; align-items: center; gap: 20px;">
-        <div style="flex: 1;">
-            <h3 style="font-size:large;">Chatbot Conversation Parsing</h3>
-            <p style = "font-size: smaller; margin-top: 0;">April 2025 - July 2025</p>
-            <p style = "font-size: medium; margin-top: 0%;">Allows for all transcripts collected during participant sessions to be split based on who was typing and then be turned to a CSV file. Done as a part of Department of Media and Information's Chatbot Experiment.</p>
-            <a href="https://github.com/Saikeertanagubbala/automation-script" target="_blank" style="
-        background: #2d6a4f;
-        color: white;
-        padding: 0.5rem 2rem;
-        border-radius: 10px;
-        text-decoration: none;
-        font-weight: 300;
-        font-size: 1rem;
-        display: inline-block;">GitHub</a> 
+        
+        <div class="project-item">
+            <div class="project-content">
+                <div class="project-caption">
+                    <h3>SCC Grid Search Optimization</h3>
+                    <p>Aug 2024 - Dec 2024</p>
+                    <p>Collaborated with a team to optimize SimplyCellCounter (SCC) for automated cell quantification. Using grid search in Python, we fine-tuned parameters and improved accuracy across a diverse dataset of mice brain images. Our work attempted to streamline SCC’s usability by addressing variability in tissue and image quality.</p>
+                </div>
+            </div>
         </div>
-        <img src="/assets/img/Automation.svg" alt="Website mockup" width="200" height="300">
-    </div>
-</section>
-<hr>
-<section class = "ux-ui-projects">
-    <h3 style = "text-align: center;"> UX/UI </h3>
-    <div style="display: flex; align-items: center; gap: 20px;">
-        <div style="flex: 1;">
-        <h3 style="font-size:large;">Athlead</h3>
-        <p style = "font-size: smaller; margin-top: 0;">March 2025</p>
-        <p style = "font-size: medium; margin-top: 0%;">Wireframe for Athlead, a mobile platform that streamlines the college recruiting process by connecting high school athletes directly with coaches while providing performance stats and academic metrics to simplify college sports recruitment.</p>
-        <a href="https://www.figma.com/proto/9IlDpUtA0psIEB6IyUyAqT/Athlead?node-id=0-1&t=3z7RUV6k1CIDFzRu-1" target="_blank" style="
-        background: #2d6a4f;
-        color: white;
-        padding: 0.5rem 2rem;
-        border-radius: 10px;
-        text-decoration: none;
-        font-weight: 300;
-        font-size: 1rem;
-        display: inline-block;">Figma</a>
+        
+        <div class="project-item">
+            <img src="/assets/img/Automation.svg" alt="Chatbot Parsing">
+            <div class="project-content">
+                <a href="https://github.com/Saikeertanagubbala/automation-script" class="project-link" target="_blank">
+                    <img src="/assets/img/github-mark-white.png" alt="github link">
+                </a>
+                <div class="project-caption">
+                    <h3>Chatbot Conversation Parsing</h3>
+                    <p>April 2025 - July 2025</p>
+                    <p>Allows for all transcripts collected during participant sessions to be split based on who was typing and then be turned to a CSV file. Done as a part of Department of Media and Information's Chatbot Experiment.</p>
+                </div>
+            </div>
         </div>
-        <img src="/assets/img/Athlead.png" alt="Website mockup" width="100" height="200">
-    </div>
-    <hr>
-
-    <div style="display: flex; align-items: center; gap: 20px;">
-        <div style ="flex:1;">
-            <h3 style="font-size:large;">Degree Navigator</h3>
-            <p style = "font-size: smaller; margin-top: 0;">Dec 2024</p>
-            <p style = "font-size: medium; margin-top: 0%;">Interactive college credit planner created in Notion. Allows you to track your courses, credits, and progress across 4 years for your major or minor with comprehensive view, customizable fields and more. Gained <strong>700+</strong> downloads and <strong>30</strong> five-star reviews.</p>
-            <a href="https://kgubbala.notion.site/Degree-Navigator-15d01a3e6800800884f9e86cea0d125d?pvs=4" target="_blank" style="
-            background: #2d6a4f;
-            color: white;
-            padding: 0.5rem 2rem;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: 300;
-            font-size: 1rem;
-            display: inline-block;">Notion Template</a>
+       
+        <div class="project-item">
+            <img src="/assets/img/Coursera_plot.png" alt="Chatbot Parsing">
+            <div class="project-content">
+                <a href="https://github.com/Saikeertanagubbala/online-course-analysis" class="project-link" target="_blank">
+                    <img src="/assets/img/github-mark-white.png" alt="github link">
+                </a>
+                <div class="project-caption">
+                    <h3>Popular Tech Online Courses</h3>
+                    <p>Jan 2025 - April 2025</p>
+                    <p>Analyzed and visualized Coursera (online course platform) data using Pandas, NumPy, Matplotlib, Seaborn, and Plotly, while addressing data quality challenges like missing values and subdomain misclassification. Highlights data cleaning, EDA, and creating accessible, insightful visualizations to uncover trends.</p>
+                </div>
+            </div>
         </div>
-        <img src="/assets/img/notion.jpg" alt="Website mockup" width="300" height="200" style="border-radius: 15px;">
     </div>
 
-    <hr>
-    <div style="display: flex; align-items: center; gap: 20px;">
-        <div style ="flex:1;">
-            <h3 style="font-size:large;">Sustainable Technology Solutions</h3>
-            <p style = "font-size: smaller; margin-top: 0;">Sep 2024 - Dec 2024</p>
-            <p style = "font-size: medium; margin-top: 0%;">Designed sustainable solutions for rural farmers and fishermen in Bangladesh through UX research and human-centered technology. Created personas, developed low-fidelity prototypes in Figma, and tested the mobile use case, showcased in the linked presentation.</p>
-            <a href="/assets/img/Final Presentation.pdf" target="_blank" style="
-            background: #2d6a4f;
-            color: white;
-            padding: 0.5rem 2rem;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: 300;
-            font-size: 1rem;
-            display: inline-block;">Presentation</a>
-        </div>
-        <img src="/assets/img/Sustainable.png" alt="Website mockup" width="100" height="200">
-    </div>
-    <hr>
-    <div style="display: flex; align-items: center; gap: 20px;">
-        <div style="flex: 1;">
-            <h3 style="font-size: large;">Co-x3 Product Mockups</h3>
-            <p style="font-size: smaller; margin-top: 0;">Aug 2024</p>
-            <p style="font-size: medium; margin-top: 0;">Created polished product demos for a non-profit's e-commerce site, enhancing brand identity and visual appeal. Conducted market research, staged products for compelling demo images, and designed multiple mockup options in Figma.</p>
-            <a href="https://www.figma.com/design/A51bcSYu5AVwh0SaaIO2Cl/Design-Ideas?node-id=0-1&t=SznbBGgSlKm2r5wX-1" target="_blank" style="
-        background: #2d6a4f;
-        color: white;
-        padding: 0.5rem 2rem;
-        border-radius: 10px;
-        text-decoration: none;
-        font-weight: 300;
-        font-size: 1rem;
-        display: inline-block;">Figma</a>
-        </div>
-        <img src="/assets/img/Cox3 mockup.jpg" alt="Website mockup" width="300" height="200" >
-    </div>
-    <hr>
-    <div style="display: flex; align-items: center; gap: 20px;">
-        <div style="flex: 1;">
-            <h3 style="font-size:large;">Co-x3 E-commerce Website</h3>
-            <p style = "font-size: smaller; margin-top: 0;">Aug 2024</p>
-            <p style = "font-size: medium; margin-top: 0%;">Assisted in designing and developing an e-commerce platform on Zoho Commerce to showcase products and support revenue generation for a non-profit. Contributed to enhancing interactivity by working with custom code and refining the user experience.</p>
-            <a href="https://shop.x3.family/" target="_blank" style="
-        background: #2d6a4f;
-        color: white;
-        padding: 0.5rem 2rem;
-        border-radius: 10px;
-        text-decoration: none;
-        font-weight: 300;
-        font-size: 1rem;
-        display: inline-block;">Website</a>
-        </div>
-        <img src="/assets/img/e-commerce.png" alt="Website mockup" width="300" height="200" style="border-radius: 15px;">
-    </div>
-    <hr>
-    <div style="display: flex; align-items: center; gap: 20px;">
-        <div style="flex: 1;">
-            <h3 style="font-size:large;">Spartan One</h3>
-            <p style = "font-size: smaller; margin-top: 0;">Aug 2023 - Oct 2023</p>
-            <p style = "font-size: medium; margin-top: 0%;">Collaborated on digitizing MSU student IDs via a mobile app, enabling NFC/RFID-based campus access. Worked with university personnel to gather technical details and developed a Figma prototype with features like temporary keycard requests.</p>
-            <a href="https://www.figma.com/design/8BWMaJa0QovACrQak6Vur1/ESHP-491---Spartan-One?node-id=1-15&t=YznklpzxTpB6hhSE-1" target="_blank" style="
-        background: #2d6a4f;
-        color: white;
-        padding: 0.5rem 2rem;
-        border-radius: 10px;
-        text-decoration: none;
-        font-weight: 300;
-        font-size: 1rem;
-        display: inline-block;">Figma</a>
-        </div>
-        <img src="/assets/img/Access card.png" alt="Website mockup" width="100" height="200">
-    </div>
+</div>
 
-</section>
+<div class="projects-container">
+    <h3 style="margin-bottom: 1em; font-weight: 600; text-align: center;">ux/ui</h3>
+    
+    <div class="masonry-grid">
+        
+        <div class="project-item">
+                    <img src="/assets/img/Athlead.png" alt="Wireframe for Athlead">
+                    <div class="project-caption">
+                        <h3>Athlead</h3>
+                        <p>March 2025</p>
+                        <p>Wireframe for Athlead, a mobile platform that streamlines the college recruiting process by connecting high school athletes directly with coaches while providing performance stats and academic metrics to simplify college sports recruitment.</p>
+                        <a href="https://www.figma.com/proto/9IlDpUtA0psIEB6IyUyAqT/Athlead?node-id=0-1&t=3z7RUV6k1CIDFzRu-1" style="
+                            background: #D9D9D9;
+                            color: #404040;
+                            padding: 0.4rem 1rem;
+                            border-radius: 20px;
+                            font-weight: 600;
+                            font-size: 1rem;
+                            text-decoration: none;
+                            display: inline-block;
+                            box-shadow: 0 2px 8px rgba(45, 106, 79, 0.2);
+                            margin-top: 0.7em;
+                            align-items: center;
+                        " 
+                        onmouseover="this.style.background='#F5B0B1'; this.style.boxShadow='0 4px 12px rgba(45, 106, 79, 0.3)'" 
+                        onmouseout="this.style.background='#D9D9D9'; this.style.boxShadow='0 2px 8px rgba(45, 106, 79, 0.2)'">
+                            Figma
+                        </a>
+                    </div>
+        </div>
+        <div class="project-item">
+                    <img src="/assets/img/notion.jpg" alt="Notion Template">
+                    <div class="project-caption">
+                        <h3>Degree Navigator</h3>
+                        <p>Dec 2024</p>
+                        <p>Interactive college credit planner created in Notion. Allows you to track your courses, credits, and progress across 4 years for your major or minor with comprehensive view, customizable fields and more. Gained <strong>700+</strong> downloads and <strong>30</strong> five-star reviews.</p>
+                        <a href="https://kgubbala.notion.site/Degree-Navigator-15d01a3e6800800884f9e86cea0d125d?pvs=4" style="
+                            background: #D9D9D9;
+                            color: #404040;
+                            padding: 0.4rem 1rem;
+                            border-radius: 20px;
+                            font-weight: 600;
+                            font-size: 1rem;
+                            text-decoration: none;
+                            display: inline-block;
+                            box-shadow: 0 2px 8px rgba(45, 106, 79, 0.2);
+                            margin-top: 0.7em;
+                            align-items: center;
+                        " 
+                        onmouseover="this.style.background='#F5B0B1'; this.style.boxShadow='0 4px 12px rgba(45, 106, 79, 0.3)'" 
+                        onmouseout="this.style.background='#D9D9D9'; this.style.boxShadow='0 2px 8px rgba(45, 106, 79, 0.2)'">
+                            Notion Template
+                        </a>
+                    </div>
+        </div>
+        <div class="project-item">
+                    <img src="/assets/img/Sustainable.png" alt="sustainability">
+                    <div class="project-caption">
+                        <h3>Sustainable Technology Solutions</h3>
+                        <p>Sep 2024 - Dec 2024</p>
+                        <p>Designed sustainable solutions for rural farmers and fishermen in Bangladesh through UX research and human-centered technology. Created personas, developed low-fidelity prototypes in Figma, and tested the mobile use case, showcased in the linked presentation.</p>
+                        <a href="/assets/img/Final Presentation.pdf" style="
+                            background: #D9D9D9;
+                            color: #404040;
+                            padding: 0.4rem 1rem;
+                            border-radius: 20px;
+                            font-weight: 600;
+                            font-size: 1rem;
+                            text-decoration: none;
+                            display: inline-block;
+                            box-shadow: 0 2px 8px rgba(45, 106, 79, 0.2);
+                            margin-top: 0.7em;
+                            align-items: center;
+                        " 
+                        onmouseover="this.style.background='#F5B0B1'; this.style.boxShadow='0 4px 12px rgba(45, 106, 79, 0.3)'" 
+                        onmouseout="this.style.background='#D9D9D9'; this.style.boxShadow='0 2px 8px rgba(45, 106, 79, 0.2)'">
+                            Presentation
+                        </a>
+                    </div>
+        </div>
+        <div class="project-item">
+                    <img src="/assets/img/Cox3 mockup.jpg" alt="Mockup for products">
+                    <div class="project-caption">
+                        <h3>Co-x3 Product Mockups</h3>
+                        <p>Aug 2024</p>
+                        <p>Created polished product demos for a non-profit's e-commerce site, enhancing brand identity and visual appeal. Conducted market research, staged products for compelling demo images, and designed multiple mockup options in Figma.</p>
+                        <a href="https://www.figma.com/design/A51bcSYu5AVwh0SaaIO2Cl/Design-Ideas?node-id=0-1&t=SznbBGgSlKm2r5wX-1" style="
+                            background: #D9D9D9;
+                            color: #404040;
+                            padding: 0.4rem 1rem;
+                            border-radius: 20px;
+                            font-weight: 600;
+                            font-size: 1rem;
+                            text-decoration: none;
+                            display: inline-block;
+                            box-shadow: 0 2px 8px rgba(45, 106, 79, 0.2);
+                            margin-top: 0.7em;
+                            align-items: center;
+                        " 
+                        onmouseover="this.style.background='#F5B0B1'; this.style.boxShadow='0 4px 12px rgba(45, 106, 79, 0.3)'" 
+                        onmouseout="this.style.background='#D9D9D9'; this.style.boxShadow='0 2px 8px rgba(45, 106, 79, 0.2)'">
+                            Figma
+                        </a>
+                    </div>
+        </div>
+        <div class="project-item">
+                    <img src="/assets/img/e-commerce.png" alt="Co-x3 E-commerce website">
+                    <div class="project-caption">
+                        <h3>Co-x3 E-commerce website</h3>
+                        <p>Aug 2024</p>
+                        <p>Assisted in designing and developing an e-commerce platform on Zoho Commerce to showcase products and support revenue generation for a non-profit. Contributed to enhancing interactivity by working with custom code and refining the user experience.</p>
+                        <a href="https://shop.x3.family/" style="
+                            background: #D9D9D9;
+                            color: #404040;
+                            padding: 0.4rem 1rem;
+                            border-radius: 20px;
+                            font-weight: 600;
+                            font-size: 1rem;
+                            text-decoration: none;
+                            display: inline-block;
+                            box-shadow: 0 2px 8px rgba(45, 106, 79, 0.2);
+                            margin-top: 0.7em;
+                            align-items: center;
+                        " 
+                        onmouseover="this.style.background='#F5B0B1'; this.style.boxShadow='0 4px 12px rgba(45, 106, 79, 0.3)'" 
+                        onmouseout="this.style.background='#D9D9D9'; this.style.boxShadow='0 2px 8px rgba(45, 106, 79, 0.2)'">
+                            Website
+                        </a>
+                    </div>
+        </div>
+        <div class="project-item">
+                            <img src="/assets/img/Access card.png" alt="Spartan One prototype">
+                            <div class="project-caption">
+                                <h3>Spartan One</h3>
+                                <p>Aug 2023 - Oct 2023</p>
+                                <p>Collaborated on digitizing MSU student IDs via a mobile app, enabling NFC/RFID-based campus access. Worked with university personnel to gather technical details and developed a Figma prototype with features like temporary keycard requests.</p>
+                                <a href="https://www.figma.com/design/8BWMaJa0QovACrQak6Vur1/ESHP-491---Spartan-One?node-id=1-15&t=YznklpzxTpB6hhSE-1" style="
+                                    background: #D9D9D9;
+                                    color: #404040;
+                                    padding: 0.4rem 1rem;
+                                    border-radius: 20px;
+                                    font-weight: 600;
+                                    font-size: 1rem;
+                                    text-decoration: none;
+                                    display: inline-block;
+                                    box-shadow: 0 2px 8px rgba(45, 106, 79, 0.2);
+                                    margin-top: 0.7em;
+                                    align-items: center;
+                                " 
+                                onmouseover="this.style.background='#F5B0B1'; this.style.boxShadow='0 4px 12px rgba(45, 106, 79, 0.3)'" 
+                                onmouseout="this.style.background='#D9D9D9'; this.style.boxShadow='0 2px 8px rgba(45, 106, 79, 0.2)'">
+                                    Figma
+                                </a>
+                            </div>
+        </div>
+    
+    
+    
+    
+    </div>
+</div>
