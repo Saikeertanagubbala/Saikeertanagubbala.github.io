@@ -1,6 +1,6 @@
 # Sai Keertana Gubbala
 
-This is my simple portfolio website created to display my skills, and experience. Feel free to fork the repo from the original creator for the most updated version and use it for your own purposes.
+My portfolio website created to display my skills, and experience. Feel free to fork the repo from the original creator for the most updated version and use it for your own purposes.
 
 ### Connect with Me:
 
