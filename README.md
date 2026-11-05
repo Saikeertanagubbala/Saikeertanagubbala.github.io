@@ -6,4 +6,4 @@ Plain HTML, CSS and JavaScript, with no build step:
 
 - `index.html` holds all the content
 - `assets/css/style.css` holds the styles
-- `assets/js/main.js` runs the intro animation and the project dropdowns
+- `assets/js/main.js` holds the project and skill "tracks" and runs the player controls

@@ -4,342 +4,172 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>keertana gubbala. i bridge.</title>
-  <meta name="description" content="Keertana Gubbala — data scientist bridging research, analytics, and user experience. M.S. Data Science, Michigan State University.">
-  <meta name="keywords" content="data science, machine learning, data analyst, data visualization, ux research, keertana gubbala">
-  <meta property="og:title" content="keertana gubbala. i bridge.">
-  <meta property="og:description" content="data scientist bridging data and purpose.">
+  <meta name="description" content="Keertana Gubbala, data scientist bridging research, analytics, and user experience. Browse her projects and skills like a playlist.">
+  <meta property="og:title" content="keertana gubbala. i bridge data and purpose.">
+  <meta property="og:description" content="data scientist. press play on my projects.">
   <meta property="og:image" content="/assets/img/keertana-hero.jpg">
-  <meta name="theme-color" content="#101010">
+  <meta name="theme-color" content="#161214">
   <link rel="icon" href="/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=IBM+Plex+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
 
-  <div class="hero-photo" aria-hidden="true">
-    <img src="/assets/img/keertana-hero.jpg" alt="">
-  </div>
-
-  <header class="hero">
-    <h1 class="hero-title" aria-label="keertana gubbala. i bridge data and purpose."><span id="typed"></span><span class="caret"></span></h1>
-    <p class="popup" aria-hidden="true">*data and purpose</p>
-    <span class="scroll-hint" aria-hidden="true">scroll ↓</span>
+  <header class="topbar">
+    <a class="logo" href="#top" aria-label="keertana gubbala, home">kg<span>.</span></a>
+    <nav>
+      <a href="#deck">the deck</a>
+      <a href="#about">about</a>
+      <a href="#contact">contact</a>
+    </nav>
+    <span class="on-air" id="onAir"><i></i>on air</span>
   </header>
 
-  <main>
+  <main id="top">
 
-    <section class="half about" id="about">
-      <span class="label">about me</span>
-      <p>
-        hi, i'm keertana. i'm finishing my m.s. in data science at michigan state, after a b.a. in information science. i started out wanting to be a bioinformatician, then fell for big datasets, clean visualizations, and the insights hiding inside them.
-      </p>
-      <p>
-        now i work where research, automation, and user experience meet: building models and dashboards, and designing the things people actually use. the short version? i bridge the gap between complex data and the people it's meant to help.
-      </p>
-      <p>
-        off the clock i run on an unreasonable amount of coffee, once spent a whole summer volunteering at a cat cafe, and make a genuinely great tres leches cake. have a look at some of my work below, or just <a href="mailto:gubbala.keertana@gmail.com">say hi</a>.
-      </p>
+    <section class="deck" id="deck" aria-label="project player">
 
-      <div class="now">
-        <span class="label">currently</span>
-        <ul>
-          <li>completing my m.s. in data science at michigan state university</li>
-          <li>building a streamlit dashboard that forecasts maintenance needs for residential buildings across msu</li>
-        </ul>
+      <!-- left: controls + intro -->
+      <div class="col-left">
+        <div class="panel controls">
+          <span class="tag">control deck</span>
+
+          <div class="buttons">
+            <div class="ctl">
+              <button class="round round-sm butter" id="prev" aria-label="previous track">
+                <svg viewBox="0 0 24 24"><path d="M6 5h2.5v14H6zM20 5v14L9.5 12z"/></svg>
+              </button>
+              <span>prev</span>
+            </div>
+            <div class="ctl">
+              <button class="round round-lg pink" id="play" aria-label="play">
+                <svg class="i-play" viewBox="0 0 24 24"><path d="M7 4.5v15L19.5 12z"/></svg>
+                <svg class="i-pause" viewBox="0 0 24 24"><path d="M6 4.5h4.5v15H6zM13.5 4.5H18v15h-4.5z"/></svg>
+              </button>
+              <span id="playLabel">play</span>
+            </div>
+            <div class="ctl">
+              <button class="round round-sm butter" id="next" aria-label="next track">
+                <svg viewBox="0 0 24 24"><path d="M15.5 5H18v14h-2.5zM4 5v14l10.5-7z"/></svg>
+              </button>
+              <span>next</span>
+            </div>
+          </div>
+
+          <div class="ctl ctl-wide">
+            <button class="round round-sm ink" id="shuffle" aria-label="shuffle to a random track">
+              <svg viewBox="0 0 24 24"><path d="M16 4h4v4l-1.4-1.4-3.9 3.9-1.4-1.4 3.9-3.9zM4 6.5h3.5c1.6 0 3 .8 3.9 2.1l4.3 6.5c.4.6 1 .9 1.7.9h.9l1.1-1.1V20h-5l1.4-1.4h-.4c-1.6 0-3-.8-3.9-2.1L7.2 10c-.4-.6-1-.9-1.7-.9H4zM4 15h1.5c.5 0 1-.2 1.4-.5l1.2 1.8c-.8.6-1.7 1.2-2.6 1.2H4z"/></svg>
+            </button>
+            <span>shuffle</span>
+          </div>
+
+          <div class="switch" role="radiogroup" aria-label="playlist">
+            <span class="tag">playlist</span>
+            <div class="seg">
+              <button role="radio" aria-checked="true" data-list="all">all</button>
+              <button role="radio" aria-checked="false" data-list="project">projects</button>
+              <button role="radio" aria-checked="false" data-list="skill">skills</button>
+            </div>
+          </div>
+
+          <p class="hint">tip: use ← → to skip, space to play</p>
+        </div>
+
+        <div class="panel intro">
+          <p class="hello">hi! i'm<br><strong>keertana gubbala.</strong><br>i bridge <em>data<br>and purpose.</em></p>
+        </div>
+      </div>
+
+      <!-- center: now playing -->
+      <div class="panel player" aria-live="polite">
+        <div class="player-head">
+          <span class="tag light">playing from</span>
+          <span class="playlist-name" id="playlistName">keertana's greatest hits</span>
+        </div>
+
+        <div class="cover-wrap">
+          <div class="cover" id="cover"></div>
+        </div>
+
+        <div class="track-meta">
+          <div>
+            <h2 id="title">—</h2>
+            <p class="artist">keertana gubbala · <span id="kind">—</span></p>
+          </div>
+          <span class="track-no" id="trackNo">01 / 14</span>
+        </div>
+
+        <div class="progress">
+          <div class="bar"><div class="fill" id="fill"></div></div>
+          <div class="times"><span id="elapsed">0:00</span><span id="when">—</span></div>
+        </div>
+
+        <div class="mini-controls" aria-label="player controls">
+          <button class="mini" data-act="shuffle" aria-label="shuffle"><svg viewBox="0 0 24 24"><path d="M16 4h4v4l-1.4-1.4-3.9 3.9-1.4-1.4 3.9-3.9zM4 6.5h3.5c1.6 0 3 .8 3.9 2.1l4.3 6.5c.4.6 1 .9 1.7.9h.9l1.1-1.1V20h-5l1.4-1.4h-.4c-1.6 0-3-.8-3.9-2.1L7.2 10c-.4-.6-1-.9-1.7-.9H4zM4 15h1.5c.5 0 1-.2 1.4-.5l1.2 1.8c-.8.6-1.7 1.2-2.6 1.2H4z"/></svg></button>
+          <button class="mini" data-act="prev" aria-label="previous track"><svg viewBox="0 0 24 24"><path d="M6 5h2.5v14H6zM20 5v14L9.5 12z"/></svg></button>
+          <button class="mini mini-play" data-act="play" aria-label="play"><svg class="i-play" viewBox="0 0 24 24"><path d="M7 4.5v15L19.5 12z"/></svg><svg class="i-pause" viewBox="0 0 24 24"><path d="M6 4.5h4.5v15H6zM13.5 4.5H18v15h-4.5z"/></svg></button>
+          <button class="mini" data-act="next" aria-label="next track"><svg viewBox="0 0 24 24"><path d="M15.5 5H18v14h-2.5zM4 5v14l10.5-7z"/></svg></button>
+        </div>
+
+        <p class="desc" id="desc">—</p>
+        <ul class="chips" id="chips"></ul>
+        <div class="links" id="links"></div>
+      </div>
+
+      <!-- right: queue -->
+      <div class="panel queue">
+        <span class="tag">up next</span>
+        <ol id="queue"></ol>
+      </div>
+
+    </section>
+
+    <section class="about" id="about">
+      <div class="artist-card">
+        <img src="/assets/img/keertana-hero.jpg" alt="Keertana Gubbala smiling in a campus atrium">
+        <div class="artist-overlay">
+          <span class="tag light">about the artist</span>
+          <h3>keertana gubbala</h3>
+        </div>
+      </div>
+
+      <div class="bio">
+        <span class="tag">liner notes</span>
+        <p>i'm finishing my m.s. in data science at michigan state, after a b.a. in information science. i started out wanting to be a bioinformatician, then fell for big datasets, clean visualizations, and the stories hiding inside them.</p>
+        <p>now i work where research, automation, and user experience meet: building models and dashboards, and designing the things people actually use. the short version? i bridge the gap between complex data and the people it's meant to help.</p>
+        <p>off the clock: an unreasonable amount of coffee, a summer volunteering at a cat cafe, and a genuinely great tres leches cake.</p>
+
+        <div class="stats">
+          <div><b>10</b><span>projects released</span></div>
+          <div><b>700+</b><span>template downloads</span></div>
+          <div><b>∞</b><span>cups of coffee</span></div>
+        </div>
+
+        <div class="now">
+          <span class="tag">currently recording</span>
+          <p>a streamlit dashboard that forecasts maintenance needs for residential buildings across msu.</p>
+        </div>
       </div>
     </section>
 
-    <section class="work" id="work" aria-label="selected work">
-      <div class="cols thead">
-        <span class="label">project</span>
-        <span class="label hide-sm">focus</span>
-        <span class="label hide-sm">type</span>
-        <span class="label"></span>
-      </div>
-      <hr class="pri">
-
-      <!-- project -->
-      <article class="project">
-        <button class="project-row cols" aria-expanded="false">
-          <p>Supercomputer Efficiency</p>
-          <p class="hide-sm">Sustainability Dashboard</p>
-          <p class="hide-sm">Data Science</p>
-          <p><span class="arrow">↓</span></p>
-        </button>
-        <div class="detail">
-          <div class="detail-inner">
-            <div><img src="/assets/img/supercomputers.jpg" alt="Supercomputer efficiency dashboard" loading="lazy"></div>
-            <div class="facts">
-              <div class="mob"><span class="label">focus</span><p>Sustainability Dashboard</p></div>
-              <div class="mob"><span class="label">type</span><p>Data Science</p></div>
-              <div><span class="label">when</span><p>Aug 2025 – Dec 2025</p></div>
-              <div><span class="label">tools</span><p>Python<br>Streamlit</p></div>
-              <div><span class="label">summary</span><p>An interactive Streamlit dashboard exploring energy-efficient computing: how supercomputer performance stacks up against power use, and what that means for global data center sustainability.</p></div>
-              <div class="links"><a href="https://github.com/Saikeertanagubbala/sustainable_supercomputers" target="_blank" rel="noopener">View on GitHub</a></div>
-            </div>
-          </div>
-        </div>
-      </article>
-      <hr class="sec">
-
-      <!-- project -->
-      <article class="project">
-        <button class="project-row cols" aria-expanded="false">
-          <p>AI Assistance by Students</p>
-          <p class="hide-sm">Survey Analysis &amp; Paper</p>
-          <p class="hide-sm">Data Science</p>
-          <p><span class="arrow">↓</span></p>
-        </button>
-        <div class="detail">
-          <div class="detail-inner">
-            <div><img src="/assets/img/sat_vs_al.png" alt="Plot of student satisfaction versus AI usage" loading="lazy"></div>
-            <div class="facts">
-              <div class="mob"><span class="label">focus</span><p>Survey Analysis &amp; Paper</p></div>
-              <div class="mob"><span class="label">type</span><p>Data Science</p></div>
-              <div><span class="label">when</span><p>Aug 2025 – Dec 2025</p></div>
-              <div><span class="label">tools</span><p>EDA &amp; Modeling<br>LaTeX / Overleaf</p></div>
-              <div><span class="label">summary</span><p>A group project on how students across disciplines use AI, how satisfied they are with it, and whether they come back to it. Mostly exploratory analysis with some modeling, written up as a paper.</p></div>
-              <div class="links"><a href="/assets/img/STT_Final_Report.pdf" target="_blank" rel="noopener">Read the Paper</a></div>
-            </div>
-          </div>
-        </div>
-      </article>
-      <hr class="sec">
-
-      <!-- project -->
-      <article class="project">
-        <button class="project-row cols" aria-expanded="false">
-          <p>Chatbot Conversation Parsing</p>
-          <p class="hide-sm">Research Automation</p>
-          <p class="hide-sm">Data Science</p>
-          <p><span class="arrow">↓</span></p>
-        </button>
-        <div class="detail">
-          <div class="detail-inner">
-            <div><img src="/assets/img/Automation.svg" alt="Diagram of the transcript parsing pipeline" loading="lazy"></div>
-            <div class="facts">
-              <div class="mob"><span class="label">focus</span><p>Research Automation</p></div>
-              <div class="mob"><span class="label">type</span><p>Data Science</p></div>
-              <div><span class="label">when</span><p>Apr 2025 – Jul 2025</p></div>
-              <div><span class="label">tools</span><p>Python</p></div>
-              <div><span class="label">summary</span><p>A script that splits every transcript collected during participant sessions by who was typing, then turns it into a clean CSV. Built for the Department of Media and Information's chatbot experiment.</p></div>
-              <div class="links"><a href="https://github.com/Saikeertanagubbala/automation-script" target="_blank" rel="noopener">View on GitHub</a></div>
-            </div>
-          </div>
-        </div>
-      </article>
-      <hr class="sec">
-
-      <!-- project -->
-      <article class="project">
-        <button class="project-row cols" aria-expanded="false">
-          <p>Athlead</p>
-          <p class="hide-sm">Recruiting App</p>
-          <p class="hide-sm">UX / UI</p>
-          <p><span class="arrow">↓</span></p>
-        </button>
-        <div class="detail">
-          <div class="detail-inner">
-            <div><img src="/assets/img/Athlead.png" alt="Athlead app wireframes" loading="lazy"></div>
-            <div class="facts">
-              <div class="mob"><span class="label">focus</span><p>Recruiting App</p></div>
-              <div class="mob"><span class="label">type</span><p>UX / UI</p></div>
-              <div><span class="label">when</span><p>Mar 2025</p></div>
-              <div><span class="label">tools</span><p>Figma</p></div>
-              <div><span class="label">summary</span><p>Wireframes for a mobile platform that simplifies college sports recruiting, connecting high school athletes directly with coaches alongside their performance stats and academic metrics.</p></div>
-              <div class="links"><a href="https://www.figma.com/proto/9IlDpUtA0psIEB6IyUyAqT/Athlead?node-id=0-1&amp;t=3z7RUV6k1CIDFzRu-1" target="_blank" rel="noopener">View in Figma</a></div>
-            </div>
-          </div>
-        </div>
-      </article>
-      <hr class="sec">
-
-      <!-- project -->
-      <article class="project">
-        <button class="project-row cols" aria-expanded="false">
-          <p>Popular Tech Online Courses</p>
-          <p class="hide-sm">Coursera Analysis</p>
-          <p class="hide-sm">Data Science</p>
-          <p><span class="arrow">↓</span></p>
-        </button>
-        <div class="detail">
-          <div class="detail-inner">
-            <div><img src="/assets/img/Coursera_plot.png" alt="Plot of popular Coursera tech courses" loading="lazy"></div>
-            <div class="facts">
-              <div class="mob"><span class="label">focus</span><p>Coursera Analysis</p></div>
-              <div class="mob"><span class="label">type</span><p>Data Science</p></div>
-              <div><span class="label">when</span><p>Jan 2025 – Apr 2025</p></div>
-              <div><span class="label">tools</span><p>Pandas, NumPy<br>Matplotlib, Seaborn, Plotly</p></div>
-              <div><span class="label">summary</span><p>Cleaned, analyzed and visualized Coursera course data, working through missing values and misclassified subdomains along the way, to surface which tech courses people actually take.</p></div>
-              <div class="links"><a href="https://github.com/Saikeertanagubbala/online-course-analysis" target="_blank" rel="noopener">View on GitHub</a></div>
-            </div>
-          </div>
-        </div>
-      </article>
-      <hr class="sec">
-
-      <!-- project -->
-      <article class="project">
-        <button class="project-row cols" aria-expanded="false">
-          <p>Degree Navigator</p>
-          <p class="hide-sm">Notion Template</p>
-          <p class="hide-sm">Product</p>
-          <p><span class="arrow">↓</span></p>
-        </button>
-        <div class="detail">
-          <div class="detail-inner">
-            <div><img src="/assets/img/notion.jpg" alt="Degree Navigator Notion template" loading="lazy"></div>
-            <div class="facts">
-              <div class="mob"><span class="label">focus</span><p>Notion Template</p></div>
-              <div class="mob"><span class="label">type</span><p>Product</p></div>
-              <div><span class="label">when</span><p>Dec 2024</p></div>
-              <div><span class="label">impact</span><p><span class="pink">700+</span> downloads<br><span class="pink">30</span> five-star reviews</p></div>
-              <div><span class="label">summary</span><p>An interactive college credit planner built in Notion. Track courses, credits and progress across four years for any major or minor, with a full overview and customizable fields.</p></div>
-              <div class="links"><a href="https://kgubbala.notion.site/Degree-Navigator-15d01a3e6800800884f9e86cea0d125d?pvs=4" target="_blank" rel="noopener">Get the Template</a></div>
-            </div>
-          </div>
-        </div>
-      </article>
-      <hr class="sec">
-
-      <!-- project -->
-      <article class="project">
-        <button class="project-row cols" aria-expanded="false">
-          <p>SCC Grid Search Optimization</p>
-          <p class="hide-sm">ML Pipeline Tuning</p>
-          <p class="hide-sm">Data Science</p>
-          <p><span class="arrow">↓</span></p>
-        </button>
-        <div class="detail">
-          <div class="detail-inner">
-            <div><div class="noimg">mouse brain images × grid search</div></div>
-            <div class="facts">
-              <div class="mob"><span class="label">focus</span><p>ML Pipeline Tuning</p></div>
-              <div class="mob"><span class="label">type</span><p>Data Science</p></div>
-              <div><span class="label">when</span><p>Aug 2024 – Dec 2024</p></div>
-              <div><span class="label">tools</span><p>Python<br>OpenCV</p></div>
-              <div><span class="label">summary</span><p>Worked with a team to optimize SimplyCellCounter, a tool for automated cell quantification. We used grid search to tune its parameters across a varied set of mouse brain images, improving accuracy and making it more reliable across differences in tissue and image quality.</p></div>
-            </div>
-          </div>
-        </div>
-      </article>
-      <hr class="sec">
-
-      <!-- project -->
-      <article class="project">
-        <button class="project-row cols" aria-expanded="false">
-          <p>Sustainable Technology Solutions</p>
-          <p class="hide-sm">UX Research</p>
-          <p class="hide-sm">UX / UI</p>
-          <p><span class="arrow">↓</span></p>
-        </button>
-        <div class="detail">
-          <div class="detail-inner">
-            <div><img src="/assets/img/Sustainable.png" alt="Sustainable technology prototype screens" loading="lazy"></div>
-            <div class="facts">
-              <div class="mob"><span class="label">focus</span><p>UX Research</p></div>
-              <div class="mob"><span class="label">type</span><p>UX / UI</p></div>
-              <div><span class="label">when</span><p>Sep 2024 – Dec 2024</p></div>
-              <div><span class="label">tools</span><p>Figma<br>Personas &amp; Usability Testing</p></div>
-              <div><span class="label">summary</span><p>Human-centered technology for rural farmers and fishermen in Bangladesh. Built personas, designed low-fidelity prototypes in Figma, and tested the mobile use case.</p></div>
-              <div class="links"><a href="/assets/img/Final%20Presentation.pdf" target="_blank" rel="noopener">View Presentation</a></div>
-            </div>
-          </div>
-        </div>
-      </article>
-      <hr class="sec">
-
-      <!-- project -->
-      <article class="project">
-        <button class="project-row cols" aria-expanded="false">
-          <p>Co-x3</p>
-          <p class="hide-sm">Mockups &amp; E-commerce</p>
-          <p class="hide-sm">UX / Web</p>
-          <p><span class="arrow">↓</span></p>
-        </button>
-        <div class="detail">
-          <div class="detail-inner">
-            <div><img src="/assets/img/Cox3%20mockup.jpg" alt="Co-x3 product mockups" loading="lazy"></div>
-            <div class="facts">
-              <div class="mob"><span class="label">focus</span><p>Mockups &amp; E-commerce</p></div>
-              <div class="mob"><span class="label">type</span><p>UX / Web</p></div>
-              <div><span class="label">when</span><p>Aug 2024</p></div>
-              <div><span class="label">tools</span><p>Figma<br>Zoho Commerce</p></div>
-              <div><span class="label">summary</span><p>Two pieces for a non-profit. First, polished product mockups: market research, staging products for demo shots, and several design options in Figma. Then helping design and build their e-commerce site on Zoho Commerce, with custom code for extra interactivity.</p></div>
-              <div class="links"><a href="https://www.figma.com/design/A51bcSYu5AVwh0SaaIO2Cl/Design-Ideas?node-id=0-1&amp;t=SznbBGgSlKm2r5wX-1" target="_blank" rel="noopener">View in Figma</a><a href="https://shop.x3.family/" target="_blank" rel="noopener">Visit Website</a></div>
-            </div>
-          </div>
-        </div>
-      </article>
-      <hr class="sec">
-
-      <!-- project -->
-      <article class="project">
-        <button class="project-row cols" aria-expanded="false">
-          <p>Spartan One</p>
-          <p class="hide-sm">Digital Student ID</p>
-          <p class="hide-sm">UX / UI</p>
-          <p><span class="arrow">↓</span></p>
-        </button>
-        <div class="detail">
-          <div class="detail-inner">
-            <div><img src="/assets/img/Access%20card.png" alt="Spartan One digital access card prototype" loading="lazy"></div>
-            <div class="facts">
-              <div class="mob"><span class="label">focus</span><p>Digital Student ID</p></div>
-              <div class="mob"><span class="label">type</span><p>UX / UI</p></div>
-              <div><span class="label">when</span><p>Aug 2023 – Oct 2023</p></div>
-              <div><span class="label">tools</span><p>Figma</p></div>
-              <div><span class="label">summary</span><p>Digitizing MSU student IDs in a mobile app with NFC/RFID campus access. Worked with university staff to gather the technical details, then built a Figma prototype with features like temporary keycard requests.</p></div>
-              <div class="links"><a href="https://www.figma.com/design/8BWMaJa0QovACrQak6Vur1/ESHP-491---Spartan-One?node-id=1-15&amp;t=YznklpzxTpB6hhSE-1" target="_blank" rel="noopener">View in Figma</a></div>
-            </div>
-          </div>
-        </div>
-      </article>
-      <hr class="sec">
-    </section>
-
-    <section class="toolkit" aria-label="toolkit">
-      <span class="label">toolkit</span>
-      <hr class="pri">
-      <div class="grid">
-        <div><span class="label">data science</span><p>Python (Pandas, NumPy, Scikit-Learn, StatsModels, PyTorch, Plotly), R (tidyverse, ggplot2), SQL, Tableau, Machine Learning, Statistical Modeling, HPC &amp; Bash</p></div>
-        <div><span class="label">ux / ui</span><p>Figma, Miro, User Research, Survey Design, Wireframing, Personas, Prototyping, Usability Testing, Heuristic Evaluation</p></div>
-        <div><span class="label">web dev</span><p>HTML/CSS, JavaScript, React, Next.js, Node.js, Vue.js, Supabase, C/C++, Vercel, Netlify</p></div>
-        <div><span class="label">also</span><p>Git, Qualtrics, Notion, Canva, Google Workspace, Microsoft Office</p></div>
+    <section class="contact" id="contact">
+      <p class="big">let's make<br>something <em>together.</em></p>
+      <div class="contact-links">
+        <a class="pill pink" href="mailto:gubbala.keertana@gmail.com">email me</a>
+        <a class="pill" href="https://www.linkedin.com/in/keertanagubbala" target="_blank" rel="noopener">linkedin</a>
+        <a class="pill" href="https://github.com/Saikeertanagubbala" target="_blank" rel="noopener">github</a>
+        <a class="pill butter" href="/assets/Gubbala_SaiKeertana.pdf" target="_blank" rel="noopener">résumé</a>
       </div>
     </section>
-
-    <section class="half contact" id="contact">
-      <span class="label">contact</span>
-      <p><a href="mailto:gubbala.keertana@gmail.com">gubbala.keertana@gmail.com</a></p>
-      <p><a href="https://www.linkedin.com/in/keertanagubbala" target="_blank" rel="noopener">linkedin</a></p>
-      <p><a href="/assets/Gubbala_SaiKeertana.pdf" target="_blank" rel="noopener">résumé</a></p>
-    </section>
-
-    <footer>
-      <hr class="pri">
-      <div class="cols">
-        <div><span class="label">© keertana gubbala 2026</span></div>
-        <div class="stack">
-          <span class="label">elsewhere</span>
-          <a class="small" href="https://github.com/Saikeertanagubbala" target="_blank" rel="noopener">github</a><br>
-          <a class="small" href="https://www.linkedin.com/in/keertanagubbala" target="_blank" rel="noopener">linkedin</a>
-        </div>
-        <div>
-          <span class="label">powered by</span>
-          <span class="label">coffee &amp; cats</span>
-        </div>
-      </div>
-
-      <div class="sign-off">
-        <img class="foot-photo" src="/assets/img/keertana-autumn.jpg" alt="Keertana sitting at a picnic table among autumn leaves" loading="lazy">
-        <p>thanks for stopping by<span class="pink">.</span></p>
-      </div>
-    </footer>
 
   </main>
+
+  <footer>
+    <span>© keertana gubbala 2026</span>
+    <span>mixed with coffee &amp; cats</span>
+  </footer>
 
   <script src="/assets/js/main.js"></script>
 </body>
