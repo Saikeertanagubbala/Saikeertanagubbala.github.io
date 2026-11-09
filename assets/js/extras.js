@@ -10,7 +10,9 @@
     { src: '/assets/img/photos/love-spells-3.jpg', caption: 'Love Spells · Third Man Records' },
     { src: '/assets/img/photos/orca-1.jpg', caption: 'Orca (opener) · Third Man Records' },
     { src: '/assets/img/photos/jackson-marshall-1.jpg', caption: 'Jackson Marshall · Green Door, Lansing' },
-    { src: '/assets/img/photos/the-braymores-1.jpg', caption: 'The Braymores · Green Door, Lansing' }
+    { src: '/assets/img/photos/the-braymores-1.jpg', caption: 'The Braymores · Green Door, Lansing' },
+    { src: '/assets/img/photos/vince-staples-1.jpg', caption: 'Vince Staples · Majestic Theatre, Detroit' },
+    { src: '/assets/img/photos/duckwrth-1.jpg', caption: 'Duckwrth (opener) · Majestic Theatre, Detroit' }
   ];
 
   // Articles and interviews, e.g.

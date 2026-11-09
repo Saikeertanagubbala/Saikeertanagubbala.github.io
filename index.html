@@ -20,8 +20,8 @@
   <header class="topbar">
     <a class="logo" href="#top" aria-label="keertana gubbala, home"><img src="/assets/img/keertana-logo.svg" alt="keertana gubbala" width="160" height="32"></a>
     <nav>
-      <a href="#deck">the deck</a>
       <a href="#about">about</a>
+      <a href="#projects">projects</a>
       <a href="#extras">off the clock</a>
       <a href="#contact">contact</a>
     </nav>
@@ -30,9 +30,29 @@
 
   <main id="top">
 
-    <section class="deck" id="deck" aria-label="project player">
+    <section class="about" id="about">
+      <h1 class="greeting">hi! i'm keertana gubbala.<br>i bridge <em>data and purpose.</em></h1>
+      <div class="artist-card">
+        <img src="/assets/img/keertana-hero.jpg" alt="Keertana Gubbala smiling in a campus atrium">
+        <div class="artist-overlay">
+          <h3>keertana gubbala</h3>
+        </div>
+      </div>
 
-      <!-- left: controls + intro -->
+      <div class="bio">
+        <span class="tag">about me</span>
+        <p>i'm finishing my m.s. in data science at michigan state, after a b.a. in information science and a focus area of human centered technology. i started out wanting to be a bioinformatician, then fell for big datasets, clean visualizations, and the stories hiding inside them.</p>
+        <p>now i work where research, automation, and user experience meet: building models and dashboards, and designing the things people actually use. the short version? i bridge the gap between complex data and the people it's meant to help.</p>
+        <p>off the clock: an unreasonable amount of coffee, a summer volunteering at a cat cafe, and a genuinely great tres leches cake.</p>
+
+      </div>
+    </section>
+
+    <section class="projects" id="projects">
+      <h2 class="sec-title">projects<span class="pink">.</span></h2>
+      <div class="deck" id="deck" aria-label="project player">
+
+      <!-- left: controls + skills -->
       <div class="col-left">
         <div class="panel controls">
           <span class="tag">control deck</span>
@@ -66,19 +86,13 @@
             <span>shuffle</span>
           </div>
 
-          <div class="switch" role="radiogroup" aria-label="playlist">
-            <span class="tag">playlist</span>
-            <div class="seg">
-              <button role="radio" aria-checked="true" data-list="all">all</button>
-              <button role="radio" aria-checked="false" data-list="project">projects</button>
-              <button role="radio" aria-checked="false" data-list="skill">skills</button>
-            </div>
-          </div>
-
         </div>
 
-        <div class="panel intro">
-          <p class="hello">hi! i'm<br><strong>keertana gubbala.</strong><br>i bridge <em>data<br>and purpose.</em></p>
+        <div class="panel skills">
+          <span class="tag">skills</span>
+          <p class="skills-hint">tap a skill with a number to see the projects that use it</p>
+          <button class="skills-clear" id="skillsClear" hidden>show all projects ×</button>
+          <div id="skills"></div>
         </div>
       </div>
 
@@ -86,7 +100,7 @@
       <div class="panel player" aria-live="polite">
         <div class="player-head">
           <span class="tag light">playing from</span>
-          <span class="playlist-name" id="playlistName">keertana's greatest hits</span>
+          <span class="playlist-name" id="playlistName">all projects</span>
         </div>
 
         <div class="cover-wrap">
@@ -124,29 +138,11 @@
         <ol id="queue"></ol>
       </div>
 
-    </section>
-
-    <section class="about" id="about">
-      <div class="artist-card">
-        <img src="/assets/img/keertana-hero.jpg" alt="Keertana Gubbala smiling in a campus atrium">
-        <div class="artist-overlay">
-          <span class="tag light">about the artist</span>
-          <h3>keertana gubbala</h3>
-        </div>
-      </div>
-
-      <div class="bio">
-        <span class="tag">about me</span>
-        <p>i'm finishing my m.s. in data science at michigan state, after a b.a. in information science and a focus area of human centered technology. i started out wanting to be a bioinformatician, then fell for big datasets, clean visualizations, and the stories hiding inside them.</p>
-        <p>now i work where research, automation, and user experience meet: building models and dashboards, and designing the things people actually use. the short version? i bridge the gap between complex data and the people it's meant to help.</p>
-        <p>off the clock: an unreasonable amount of coffee, a summer volunteering at a cat cafe, and a genuinely great tres leches cake.</p>
-
       </div>
     </section>
 
     <section class="extras" id="extras">
       <div class="extras-head">
-        <span class="tag">extracurriculars</span>
         <h2>off the clock<span class="pink">.</span></h2>
       </div>
 
@@ -157,25 +153,17 @@
           <p>writing articles, interviewing, and shooting concerts for msu's student-run radio station.</p>
         </article>
         <article class="x-card butter">
-          <span class="tag">msu scireview</span>
-          <h3>author &amp; social media / marketing director</h3>
-          <p>writing for msu's student science publication and running its social media and marketing.</p>
-        </article>
-        <article class="x-card blush">
-          <span class="tag">volunteering</span>
-          <h3>giving back</h3>
+          <h3>volunteering</h3>
           <ul><li>cat café caregiver</li><li>hospice care</li><li>concession aide for easterseals</li><li>non-profit tutor</li></ul>
         </article>
         <article class="x-card ink">
-          <span class="tag">clubs &amp; mentoring</span>
-          <h3>in the room</h3>
+          <h3>clubs &amp; mentoring</h3>
           <ul><li>spartan stats club</li><li>women in computing</li><li>society of women engineers</li><li>graduate stem mentor</li></ul>
         </article>
       </div>
 
       <div class="x-block" id="photoBlock" hidden>
         <div class="x-block-head">
-          <span class="tag">behind the lens</span>
           <h3>concert photography</h3>
           <span class="x-note">shot on iphone</span>
         </div>
@@ -184,15 +172,14 @@
 
       <div class="x-block" id="writingBlock" hidden>
         <div class="x-block-head">
-          <span class="tag">bylines</span>
-          <h3>things i've written</h3>
+          <h3>things i've done</h3>
         </div>
         <ol class="articles" id="articles"></ol>
       </div>
     </section>
 
     <section class="contact" id="contact">
-      <p class="big">let's make<br>something <em>together.</em></p>
+      <h2 class="connect">connect with me on <em>socials.</em></h2>
       <div class="contact-links">
         <a class="pill pink" href="mailto:gubbala.keertana@gmail.com">email me</a>
         <a class="pill" href="https://www.linkedin.com/in/keertanagubbala" target="_blank" rel="noopener">linkedin</a>
