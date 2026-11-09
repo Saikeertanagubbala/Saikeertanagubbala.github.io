@@ -5,11 +5,16 @@
   // Concert photos. Put the image files in /assets/img/photos/ and list them here, e.g.
   //   { src: '/assets/img/photos/artist-venue.jpg', caption: 'Artist · Venue, Oct 2025' },
   var photos = [
+    { src: '/assets/img/photos/love-spells-1.jpg', caption: 'Love Spells · Third Man Records' },
+    { src: '/assets/img/photos/love-spells-2.jpg', caption: 'Love Spells · Third Man Records' },
+    { src: '/assets/img/photos/love-spells-3.jpg', caption: 'Love Spells · Third Man Records' },
+    { src: '/assets/img/photos/orca-1.jpg', caption: 'Orca (opener) · Third Man Records' }
   ];
 
   // Articles and interviews, e.g.
   //   { title: 'Article title', outlet: 'Impact 89FM', date: 'Oct 2025', url: 'https://...' },
   var articles = [
+    { title: 'Love Is the Law: Love Spells at Third Man Records', outlet: 'Impact 89FM', url: 'https://impact89fm.org/131953/music/love-is-the-law-love-spells-at-third-man-records/' }
   ];
 
   function esc(s) {
