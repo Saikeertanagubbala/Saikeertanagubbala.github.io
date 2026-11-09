@@ -5,6 +5,7 @@
   var tracks = [
     {
       title: 'Concerts4Superfans', kind: 'Data Engineering',
+      img: '/assets/img/concerts4superfans.webp',
       desc: 'A concert recommender that ingests Spotify streaming history into a DuckDB ETL pipeline, engineering 8 behavioral features across 100,000+ streams and 2,700+ artists to score how deep a fan really is. Those scores meet live Spotify and Ticketmaster APIs to surface upcoming shows by location and price for a listener’s top 50 artists, and GitHub Actions sends a personalized email digest every week.',
       tags: ['Python', 'SQL', 'DuckDB', 'ETL', 'Spotify API', 'Ticketmaster API', 'GitHub Actions'],
       links: [['GitHub', 'https://github.com/Saikeertanagubbala/Concerts4Superfans']]
@@ -153,6 +154,20 @@
       (small ? initials(t.title) : '<b>' + esc(t.title) + '</b>') + '</span>';
   }
 
+  // wide images (like a banner) get a full-width cover with their own shape
+  var coverWrap = document.querySelector('.cover-wrap');
+  function fitCover() {
+    var img = el.cover.querySelector('img');
+    function apply() {
+      var r = img && img.naturalWidth ? img.naturalWidth / img.naturalHeight : 1;
+      var wide = r > 1.25;
+      coverWrap.classList.toggle('wide', wide);
+      el.cover.style.aspectRatio = wide ? String(r) : '';
+    }
+    if (img && !img.complete) img.addEventListener('load', apply, { once: true });
+    apply();
+  }
+
   function pad(n) { return (n < 10 ? '0' : '') + n; }
 
   function renderQueue() {
@@ -170,6 +185,7 @@
     var t = list[index];
 
     el.cover.innerHTML = artFor(t, t.title);
+    fitCover();
     el.title.textContent = t.title;
     el.kind.textContent = t.kind;
     el.trackNo.textContent = pad(index + 1) + ' / ' + pad(list.length);

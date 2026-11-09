@@ -304,6 +304,8 @@ img { display: block; max-width: 100%; }
   line-height: 0.95;
 }
 .cover-wrap { container-type: inline-size; }
+.cover-wrap.wide { width: 100%; }
+.cover-wrap.wide .cover img { object-fit: cover; }
 .ph b { font-size: 7.4cqi; font-weight: 900; overflow-wrap: break-word; min-width: 0; }
 .ph.pink { background: var(--pink); color: var(--cream); }
 .ph.butter { background: var(--butter); color: var(--ink); }
@@ -331,6 +333,8 @@ img { display: block; max-width: 100%; }
 .artist { margin: 6px 0 0; font-size: 15px; color: rgba(247, 241, 232, 0.65); }
 .artist span { color: var(--butter); }
 .track-no { font-family: var(--mono); font-size: 12px; opacity: 0.6; white-space: nowrap; }
+.track-meta > div { min-width: 0; }
+.track-meta h2 { overflow-wrap: break-word; }
 .fade-in { animation: fade 0.4s ease; }
 @keyframes fade { from { opacity: 0; transform: translateY(6px); } }
 
