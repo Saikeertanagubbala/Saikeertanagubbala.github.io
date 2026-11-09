@@ -22,6 +22,7 @@
     <nav>
       <a href="#deck">the deck</a>
       <a href="#about">about</a>
+      <a href="#extras">off the clock</a>
       <a href="#contact">contact</a>
     </nav>
     <span class="on-air" id="onAir"><i></i>on air</span>
@@ -143,6 +144,53 @@
       </div>
     </section>
 
+    <section class="extras" id="extras">
+      <div class="extras-head">
+        <span class="tag">extracurriculars</span>
+        <h2>off the clock<span class="pink">.</span></h2>
+      </div>
+
+      <div class="extras-grid">
+        <article class="x-card pink">
+          <span class="tag">impact 89fm</span>
+          <h3>writer, interviewer &amp; photographer</h3>
+          <p>writing articles, interviewing, and shooting concerts for msu's student-run radio station.</p>
+        </article>
+        <article class="x-card butter">
+          <span class="tag">msu scireview</span>
+          <h3>author &amp; social media / marketing director</h3>
+          <p>writing for msu's student science publication and running its social media and marketing.</p>
+        </article>
+        <article class="x-card blush">
+          <span class="tag">volunteering</span>
+          <h3>giving back</h3>
+          <ul><li>cat café caregiver</li><li>hospice care</li><li>concession aide for easterseals</li><li>non-profit tutor</li></ul>
+        </article>
+        <article class="x-card ink">
+          <span class="tag">clubs &amp; mentoring</span>
+          <h3>in the room</h3>
+          <ul><li>spartan stats club</li><li>women in computing</li><li>society of women engineers</li><li>graduate stem mentor</li></ul>
+        </article>
+      </div>
+
+      <div class="x-block" id="photoBlock" hidden>
+        <div class="x-block-head">
+          <span class="tag">behind the lens</span>
+          <h3>concert photography</h3>
+          <span class="x-note">shot on iphone</span>
+        </div>
+        <div class="gallery" id="gallery"></div>
+      </div>
+
+      <div class="x-block" id="writingBlock" hidden>
+        <div class="x-block-head">
+          <span class="tag">bylines</span>
+          <h3>things i've written</h3>
+        </div>
+        <ol class="articles" id="articles"></ol>
+      </div>
+    </section>
+
     <section class="contact" id="contact">
       <p class="big">let's make<br>something <em>together.</em></p>
       <div class="contact-links">
@@ -160,6 +208,13 @@
     <span>mixed with coffee &amp; cats</span>
   </footer>
 
+  <dialog class="lightbox" id="lightbox" aria-label="photo viewer">
+    <button class="lb-close" id="lbClose" aria-label="close">×</button>
+    <img id="lbImg" alt="">
+    <p id="lbCap"></p>
+  </dialog>
+
   <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/extras.js"></script>
 </body>
 </html>
