@@ -58,7 +58,7 @@
     },
     {
       title: 'SimpylCellCounter ML Enhancement', kind: 'Image Processing',
-      img: '/assets/img/simpylcellcounter.svg',
+      img: '/assets/img/simpylcellcounter.webp',
       desc: 'Extended an OpenCV cell-counting algorithm with grid-search tuning across 5 parameters and batch cross-validation on 150 mouse brain-tissue images, replacing manual calibration.',
       tags: ['Python', 'OpenCV', 'Scikit-learn', 'NumPy', 'Grid Search'],
       links: []
