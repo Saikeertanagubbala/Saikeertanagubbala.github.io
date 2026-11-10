@@ -18,7 +18,7 @@
     },
     {
       title: 'Music Genre Classification', kind: 'Machine Learning',
-      img: '/assets/img/music-genre-tree.webp',
+      img: '/assets/img/genre-tree 1.svg',
       desc: 'Used PCA on 1,000 GTZAN audio files to narrow 10 genres to 3 separable classes, with a rule-based decision tree as a 55% baseline. A tuned KNN reached 73%, then Random Forest, Gradient Boosting, AdaBoost and XGBoost were benchmarked on accuracy, precision, recall and F1, with XGBoost on top at 83%.',
       tags: ['Scikit-learn', 'XGBoost', 'PCA', 'Grid Search', 'Audio Features'],
       links: [['GitHub', 'https://github.com/archishabhatt/Music-Genre-Classification']]
