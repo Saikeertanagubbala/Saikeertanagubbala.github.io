@@ -25,6 +25,7 @@
     },
     {
       title: 'Customer Sentiment Analysis', kind: 'NLP',
+      img: '/assets/img/customer-sentiment.svg',
       desc: 'A binary sentiment classifier across 41K+ Amazon reviews using TF-IDF and three supervised models: SVM (91.71%), logistic regression (91.15%) and multinomial naive Bayes (89.96%), beating a rule-based baseline by 13%. The classical models were then benchmarked against a fine-tuned BERT model.',
       tags: ['NLP', 'Scikit-learn', 'SVM', 'BERT', 'TF-IDF'],
       links: [['GitHub', 'https://github.com/archishabhatt/customer_review_analysis']]
@@ -294,7 +295,7 @@
   function filterBy(skill) {
     activeSkill = skill === activeSkill ? null : skill;
     list = activeSkill ? tracks.filter(function (t) { return uses(t, activeSkill); }) : tracks.slice();
-    el.playlistName.textContent = activeSkill ? 'projects using ' + activeSkill : 'all projects';
+    if (el.playlistName) el.playlistName.textContent = activeSkill ? 'projects using ' + activeSkill : 'all projects';
     clearBtn.hidden = !activeSkill;
     renderSkills();
     show(0);
@@ -314,13 +315,20 @@
 
   function next() { show(index + 1); }
   function prev() { show(index - 1); }
+  // reshuffle the queue order and play the new first track
   function shuffle() {
     if (list.length < 2) return;
-    var j;
-    do { j = Math.floor(Math.random() * list.length); } while (j === index);
+    var current = list[index];
+    var order = list.slice();
+    for (var i = order.length - 1; i > 0; i--) {
+      var k = Math.floor(Math.random() * (i + 1));
+      var tmp = order[i]; order[i] = order[k]; order[k] = tmp;
+    }
+    if (order[0] === current) order.push(order.shift());   // always land on a different project
+    list = order;
     var b = $('shuffle');
     b.classList.remove('spin'); void b.offsetWidth; b.classList.add('spin');
-    show(j);
+    show(0);
   }
   function toggle() { setPlaying(!playing); }
 
