@@ -111,7 +111,7 @@
   // ---------- skills (shown in the panel next to the player) ----------
   var skills = [
     ['machine learning', ['Python', 'R', 'SQL', 'Scikit-learn', 'PyTorch', 'XGBoost', 'Pandas', 'NumPy', 'SciPy', 'Statsmodels',]],
-    ['statistics', ['Distributions', 'MLE', 'Chi-Square Goodness of Fit/Independence', 'Conditional Probability', 'Bayes Theorem', 'Bayesian Inference', 'Monte Carlo Simualtions', 'Bootstrapping']]
+    ['statistics', ['Distributions', 'MLE', 'Chi-Square Goodness of Fit/Independence', 'Conditional Probability', 'Bayes Theorem', 'Bayesian Inference', 'Monte Carlo Simualtions', 'Bootstrapping']],
     ['ai & llms', ['NLP', 'NLTK', 'LangChain', 'Ollama', 'RAG', 'Prompt Engineering', 'LLM Evaluation', 'BERT', 'Transformers', 'Encoder/Decoders']],
     ['data viz & bi', ['Tableau', 'Power BI', 'Excel & Power Query (Pivot Tables & V/X-Lookups)', 'Matplotlib', 'Seaborn', 'Plotly', 'Streamlit']],
     ['data engineering & devops', ['Git', 'GitHub Actions', 'GitLab CI/CD', 'DuckDB', 'Databricks', 'Docker', 'Kubernetes', 'Microsoft Azure', 'HPCC', 'Bash/Slurm Scripting']],
