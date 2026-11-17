@@ -110,11 +110,12 @@
 
   // ---------- skills (shown in the panel next to the player) ----------
   var skills = [
-    ['machine learning', ['Python', 'R', 'SQL', 'Scikit-learn', 'PyTorch', 'XGBoost', 'Pandas', 'NumPy', 'SciPy', 'Statsmodels', 'OpenCV']],
-    ['ai & llms', ['NLP', 'NLTK', 'LangChain', 'Ollama', 'RAG', 'Prompt Engineering', 'LLM Evaluation', 'BERT / RoBERTa']],
-    ['data viz & bi', ['Tableau', 'Power BI', 'Excel & Power Query', 'Matplotlib', 'Seaborn', 'Plotly', 'Streamlit', 'R Shiny']],
-    ['data engineering & devops', ['Git', 'GitHub Actions', 'GitLab CI/CD', 'DuckDB', 'Databricks', 'Docker', 'Kubernetes', 'Azure', 'HPCC', 'Bash']],
-    ['ux research & design', ['Figma', 'Miro', 'User Research', 'Survey Design', 'Qualtrics', 'Personas', 'Prototyping', 'Usability Testing']],
+    ['machine learning', ['Python', 'R', 'SQL', 'Scikit-learn', 'PyTorch', 'XGBoost', 'Pandas', 'NumPy', 'SciPy', 'Statsmodels',]],
+    ['statistics', ['Distributions', 'MLE', 'Chi-Square Goodness of Fit/Independence', 'Conditional Probability', 'Bayes Theorem', 'Bayesian Inference', 'Monte Carlo Simualtions', 'Bootstrapping']]
+    ['ai & llms', ['NLP', 'NLTK', 'LangChain', 'Ollama', 'RAG', 'Prompt Engineering', 'LLM Evaluation', 'BERT', 'Transformers', 'Encoder/Decoders']],
+    ['data viz & bi', ['Tableau', 'Power BI', 'Excel & Power Query (Pivot Tables & V/X-Lookups)', 'Matplotlib', 'Seaborn', 'Plotly', 'Streamlit']],
+    ['data engineering & devops', ['Git', 'GitHub Actions', 'GitLab CI/CD', 'DuckDB', 'Databricks', 'Docker', 'Kubernetes', 'Microsoft Azure', 'HPCC', 'Bash/Slurm Scripting']],
+    ['ux research & design', ['Figma', 'Miro', 'User Research', 'Survey Design', 'Qualtrics', 'Personas', 'Prototyping', 'Usability Testing', 'Notion']],
     ['web development', ['HTML / CSS', 'JavaScript', 'React', 'Next.js', 'Node.js', 'Supabase', 'C / C++', 'Power Apps']]
   ];
 
