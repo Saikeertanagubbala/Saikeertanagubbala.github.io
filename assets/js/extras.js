@@ -3,6 +3,7 @@
   // Photos live in /assets/js/photos.js. Articles are listed below, newest first, e.g.
   //   { title: 'Article title', outlet: 'Impact 89FM', url: 'https://...' },
   var articles = [
+    { title: 'The Braymores | Impact89FM Interview at Green Door', outlet: 'Impact 89FM', url: 'https://www.youtube.com/watch?v=CClNHOwqYYA' },
     { title: 'Cry Baby: Vince Staples at the Majestic Theatre', outlet: 'Impact 89FM', url: 'https://impact89fm.org/132398/music/cry-baby-vince-staples-at-the-majestic-theatre/' },
     { title: 'Love Is the Law: Love Spells at Third Man Records', outlet: 'Impact 89FM', url: 'https://impact89fm.org/131953/music/love-is-the-law-love-spells-at-third-man-records/' }
   ];
