@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>photography · keertana gubbala</title>
+  <meta name="description" content="Concert photography by Keertana Gubbala, shot on iPhone for Impact 89FM.">
+  <meta property="og:title" content="keertana gubbala. i bridge data and purpose.">
+  <meta property="og:description" content="data scientist. press play on my projects.">
+  <meta property="og:image" content="/assets/img/keertana-hero.jpg">
+  <meta name="theme-color" content="#161214">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <a class="logo" href="/" aria-label="keertana gubbala, home"><img src="/assets/img/keertana-logo.svg" alt="keertana gubbala" width="160" height="32"></a>
+    <nav>
+      <a href="/#about">about</a>
+      <a href="/#projects">projects</a>
+      <a href="/#extras">off the clock</a>
+      <a href="/photography" aria-current="page">photography</a>
+      <a href="/#contact">contact</a>
+    </nav>
+  </header>
+
+  <main class="photo-page">
+    <a class="back" href="/#extras">← back to the main page</a>
+    <h1 class="sec-title">photography<span class="pink">.</span></h1>
+    <p class="photo-intro">concert photos shot on iphone, mostly for impact 89fm.</p>
+    <div id="showList"></div>
+  </main>
+
+  <footer>
+    <span>© keertana gubbala 2026</span>
+    <span>mixed with coffee &amp; cats</span>
+  </footer>
+
+  <dialog class="lightbox" id="lightbox" aria-label="photo viewer">
+    <button class="lb-close" id="lbClose" aria-label="close">×</button>
+    <img id="lbImg" alt="">
+    <p id="lbCap"></p>
+  </dialog>
+
+  <script src="/assets/js/photos.js"></script>
+  <script src="/assets/js/extras.js"></script>
+</body>
+</html>
