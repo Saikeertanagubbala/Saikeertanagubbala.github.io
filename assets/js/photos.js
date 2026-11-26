@@ -1,10 +1,11 @@
 // Concert photography. Used by the home page preview and /photography.
 // To add a photo: put the image in /assets/img/photos/ and add a line below.
-// `featured: true` photos show on the home page (keep it to 4); the rest show on /photography.
+// `featured: true` photos also show on the home page (keep it to 4). Every photo shows on /photography.
+// `full: true` shows the whole photo instead of cropping it to fill the frame.
 window.KG_PHOTOS = [
   { src: '/assets/img/photos/vince-staples-1.jpg', caption: 'Vince Staples · Majestic Theatre, Detroit', featured: true },
   { src: '/assets/img/photos/duckwrth-1.jpg', caption: 'Duckwrth · Majestic Theatre, Detroit', featured: true },
-  { src: '/assets/img/photos/strange-skin-2.jpg', caption: 'Strange Skin · The Basement, Impact 89FM', featured: true },
+  { src: '/assets/img/photos/strange-skin-2.jpg', caption: 'Strange Skin · The Basement, Impact 89FM', featured: true, full: true },
   { src: '/assets/img/photos/orca-1.jpg', caption: 'Orca · Third Man Records', featured: true },
 
   { src: '/assets/img/photos/strange-skin-1.jpg', caption: 'Strange Skin · The Basement, Impact 89FM' },

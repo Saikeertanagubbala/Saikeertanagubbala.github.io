@@ -18,7 +18,7 @@
   function figure(p) {
     var i = all.indexOf(p);
     return '<figure><button data-i="' + i + '" aria-label="view photo: ' + esc(p.caption) + '">' +
-      '<img src="' + esc(p.src) + '" alt="' + esc(p.caption) + '" loading="lazy"></button>' +
+      '<img src="' + esc(p.src) + '" alt="' + esc(p.caption) + '" loading="lazy"' + (p.full ? ' class="full"' : '') + '></button>' +
       '<figcaption>' + esc(p.caption) + '</figcaption></figure>';
   }
 
@@ -48,9 +48,9 @@
     gallery.innerHTML = (featured.length ? featured : all.slice(0, 4)).map(figure).join('');
   }
 
-  // photography page: everything not featured on the home page
+  // photography page: every photo
   var more = document.getElementById('moreGallery');
-  if (more) more.innerHTML = all.filter(function (p) { return !p.featured; }).map(figure).join('');
+  if (more) more.innerHTML = all.map(figure).join('');
 
   // articles (home page)
   var list = document.getElementById('articles');

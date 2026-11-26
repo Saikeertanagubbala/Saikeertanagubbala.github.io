@@ -602,6 +602,7 @@ img { display: block; max-width: 100%; }
 .gallery button { display: block; width: 100%; padding: 0; border: 0; background: none; cursor: zoom-in; }
 .gallery button:focus-visible { outline: 3px dashed var(--pink); outline-offset: 3px; }
 .gallery img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
+.gallery img.full { object-fit: contain; background: var(--cream); }
 .gallery figcaption { font-family: var(--mono); font-size: 11px; padding: 8px 2px 10px; }
 
 .articles { list-style: none; margin: 0; padding: 0; border-top: var(--line); }
