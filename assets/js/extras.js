@@ -13,14 +13,7 @@
     });
   }
 
-  var shows = (window.KG_PHOTOS || []).filter(function (s) { return s.photos.length; });
-  var all = [];   // every photo with its caption, in display order
-  shows.forEach(function (s) {
-    s.photos.forEach(function (p) {
-      all.push({ src: p.src, featured: p.featured, show: s,
-                 caption: (p.who || s.artist) + ' · ' + s.venue });
-    });
-  });
+  var all = window.KG_PHOTOS || [];
 
   function figure(p) {
     var i = all.indexOf(p);
@@ -47,7 +40,7 @@
     box.addEventListener('click', function (e) { if (e.target === box) box.close(); });
   }
 
-  // home page: a preview row + link to the full page
+  // home page: the featured photos + a link to the rest
   var gallery = document.getElementById('gallery');
   if (gallery && all.length) {
     document.getElementById('photoBlock').hidden = false;
@@ -55,22 +48,9 @@
     gallery.innerHTML = (featured.length ? featured : all.slice(0, 4)).map(figure).join('');
   }
 
-  // photography page: every show
-  var showList = document.getElementById('showList');
-  if (showList) {
-    showList.innerHTML = shows.map(function (s) {
-      var count = s.photos.length;
-      return '<section class="show">' +
-        '<div class="show-head">' +
-          '<h2>' + esc(s.artist) + '</h2>' +
-          '<p class="show-meta">' + (s.opener ? 'with ' + esc(s.opener) + ' · ' : '') + esc(s.venue) +
-            ' · ' + count + ' photo' + (count > 1 ? 's' : '') + '</p>' +
-          (s.article ? '<a class="pill small-pill" href="' + esc(s.article) + '" target="_blank" rel="noopener">read the review ↗</a>' : '') +
-        '</div>' +
-        '<div class="gallery">' + all.filter(function (p) { return p.show === s; }).map(figure).join('') + '</div>' +
-        '</section>';
-    }).join('');
-  }
+  // photography page: everything not featured on the home page
+  var more = document.getElementById('moreGallery');
+  if (more) more.innerHTML = all.filter(function (p) { return !p.featured; }).map(figure).join('');
 
   // articles (home page)
   var list = document.getElementById('articles');
